@@ -42,17 +42,14 @@
 
 <style>
   .scene { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; pointer-events: none; }
-  .sun { transform-origin: 1300px 468px; transform: translateY(160px) scale(0.92); animation: rise-sun 3.2s var(--t-ease) forwards; }
-  .ridge { transform: translateY(40px); animation: settle 1.4s var(--t-ease) forwards; animation-delay: calc(0.4s + var(--d) * 0.15s); }
+  .sun { transform: translateY(160px); }
+  .ridge { transform: translateY(40px); }
   .haze { animation: breathe 14s ease-in-out infinite alternate; }
   .slow { animation-duration: 20s; animation-direction: alternate-reverse; }
   .birds { animation: fly 45s linear infinite; }
-  @keyframes rise-sun { to { transform: none; } }
-  @keyframes settle { to { transform: none; } }
   @keyframes breathe { from { opacity: 0.5; } to { opacity: 1; } }
   @keyframes fly { from { transform: translate(-250px, 40px); } to { transform: translate(1000px, -60px); } }
   @media (prefers-reduced-motion: reduce) {
-    .sun, .ridge { animation: none; transform: none; }
     .haze, .birds { animation: none; }
   }
 </style>

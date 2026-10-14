@@ -12,12 +12,6 @@ export const projects = [
   { title: 'Sina UI', what: 'A small, copy-in Svelte component library. Tokens over themes, props over forks.', tags: ['Svelte', 'TypeScript'], year: '2025' }
 ];
 
-export const principles = [
-  ['Simple under load', 'The shortest solution that works, then measured before it grows.'],
-  ['API first', 'The interface is the product. Errors are structured and stable.'],
-  ['Halal software', 'No dark patterns, no hidden fees, nothing that works against the person using it.']
-];
-
 export const links = [
   ['GitHub', 'https://github.com/ebnsina'],
   ['Email', `mailto:${email}`]

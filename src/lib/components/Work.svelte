@@ -1,22 +1,35 @@
 <script lang="ts">
   import { projects } from '#lib/content.ts';
-  import { reveal } from '#lib/reveal.ts';
+  import { gsap, motion } from '#lib/motion.ts';
+  let root: HTMLElement;
+
+  $effect(() =>
+    motion(root, (reduce) => {
+      gsap.set('.pre', { visibility: 'visible' });
+      if (reduce) return;
+      gsap.from('.head', { autoAlpha: 0, y: 20, duration: 1, scrollTrigger: { trigger: '.head', start: 'top 85%' } });
+      gsap.utils.toArray<HTMLElement>('li').forEach((li) => {
+        gsap.from(li.querySelectorAll('.t, .d'), { autoAlpha: 0, y: 50, duration: 1.1, stagger: 0.12, ease: 'power3.out', scrollTrigger: { trigger: li, start: 'top 85%' } });
+        gsap.fromTo(li.querySelector('.n'), { y: 60 }, { y: -60, ease: 'none', scrollTrigger: { trigger: li, start: 'top bottom', end: 'bottom top', scrub: true } });
+      });
+    })
+  );
 </script>
 
-<section id="work" class="work">
-  <header class="head reveal" use:reveal>
+<section id="work" class="work" bind:this={root}>
+  <header class="head pre">
     <h2>Selected work</h2>
     <span><em>0{projects.length}</em> projects, 2025 to now</span>
   </header>
   <ol>
     {#each projects as p, i}
-      <li class="reveal" use:reveal style="--i:{i}">
+      <li>
         <em class="n" aria-hidden="true">0{i + 1}</em>
-        <div class="t">
+        <div class="t pre">
           <h3>{p.title}</h3>
           <span class="arrow" aria-hidden="true">→</span>
         </div>
-        <div class="d">
+        <div class="d pre">
           <p>{p.what}</p>
           <span class="meta">{p.tags.join(' · ')}<span class="year">{p.year}</span></span>
         </div>
@@ -26,7 +39,7 @@
 </section>
 
 <style>
-  .work { background: #17251b; color: #eef3ee; padding: clamp(4rem, 10vw, 9rem) var(--t-gutter); }
+  .work { background: #17251b; color: #eef3ee; padding: clamp(4rem, 10vw, 9rem) var(--t-gutter); overflow: hidden; }
   .head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; font-size: 0.875rem; color: #9fb3a3; margin-bottom: clamp(2rem, 6vw, 5rem); }
   h2 { font-size: inherit; font-weight: 400; }
   .head em { color: var(--t-accent); font-size: 1.1em; }
