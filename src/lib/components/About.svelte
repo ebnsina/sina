@@ -19,7 +19,7 @@
 
 <section id="about" class="about" bind:this={root}>
   <p class="big pre">
-    I'm Sina, a software engineer in Bangladesh. I build backends in Go and interfaces in Svelte,
+    I'm Sina, a software engineer in Bangladesh. I build backends in Rust and Go on PostgreSQL and ClickHouse, and interfaces in Svelte,
     and I care most about the parts nobody sees: <em>clear errors, honest pricing, code that stays small.</em>
   </p>
 </section>

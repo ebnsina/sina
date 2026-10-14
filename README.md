@@ -2,7 +2,7 @@
 
 One-page portfolio. Live at <https://ebnsina.github.io/sina/>.
 
-Software engineer in Bangladesh building calm, well-made products. Backends in Go with PostgreSQL, interfaces in Svelte.
+Software engineer in Bangladesh building calm, well-made products. Backends in Rust and Go on PostgreSQL and ClickHouse, interfaces in TypeScript with Svelte and SvelteKit.
 
 ## Stack
 

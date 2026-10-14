@@ -15,7 +15,7 @@
     jobTitle: 'Software engineer',
     address: { '@type': 'PostalAddress', addressCountry: 'BD' },
     sameAs: ['https://github.com/ebnsina'],
-    knowsAbout: ['Go', 'PostgreSQL', 'Svelte', 'SvelteKit', 'Video infrastructure'],
+    knowsAbout: ['Rust', 'Go', 'TypeScript', 'PostgreSQL', 'ClickHouse', 'Svelte', 'SvelteKit', 'Video infrastructure'],
     hasOccupation: { '@type': 'Occupation', name: 'Software engineer' },
     owns: projects.map((p) => ({ '@type': 'SoftwareApplication', name: p.title, description: p.what }))
   });
