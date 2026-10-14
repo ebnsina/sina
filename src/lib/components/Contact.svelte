@@ -12,9 +12,11 @@
       if (reduce) return;
       // Dusk to night: sky stops darken, stars and moon appear, layers parallax at different depths
       gsap.timeline({ scrollTrigger: { trigger: root, start: 'top bottom', end: 'bottom bottom', scrub: 0.6 } })
-        .to('.s1', { attr: { 'stop-color': '#2f3f33' }, ease: 'none' }, 0)
-        .to('.s2', { attr: { 'stop-color': '#17251b' }, ease: 'none' }, 0)
-        .to('.s3', { attr: { 'stop-color': '#2a3f30' }, ease: 'none' }, 0)
+        .to('.s1', { attr: { 'stop-color': '#aab3a3' }, ease: 'none' }, 0)
+        .to('.s2', { attr: { 'stop-color': '#5f6f5f' }, ease: 'none' }, 0)
+        .to('.s3', { attr: { 'stop-color': '#34463a' }, ease: 'none' }, 0)
+        .to('.s4', { attr: { 'stop-color': '#1f2f25' }, ease: 'none' }, 0)
+        .to('.s5', { attr: { 'stop-color': '#17251b' }, ease: 'none' }, 0)
         .to('.stars', { opacity: 1, y: -60, ease: 'none' }, 0.2)
         .to('.moon', { opacity: 1, y: -90, ease: 'none' }, 0.1)
         .fromTo('.r1', { y: 420 }, { y: 0, ease: 'power1.out', duration: 0.8 }, 0.25)
