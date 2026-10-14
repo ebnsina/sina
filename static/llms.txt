@@ -2,7 +2,7 @@
 
 > Software engineer in Bangladesh building calm, well-made products. Backends in Go with PostgreSQL, interfaces in Svelte and SvelteKit.
 
-Site: https://sina.bd
+Site: https://ebnsina.github.io/sina
 Email: ebnsina.dev@gmail.com
 WhatsApp: +8801841252123
 GitHub: https://github.com/ebnsina

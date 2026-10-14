@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sina.bd/sitemap.xml
+Sitemap: https://ebnsina.github.io/sina/sitemap.xml
