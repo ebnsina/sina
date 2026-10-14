@@ -1,0 +1,56 @@
+<script lang="ts">
+  import { projects } from '#lib/content.ts';
+  import { reveal } from '#lib/reveal.ts';
+</script>
+
+<section id="work" class="work">
+  <header class="head reveal" use:reveal>
+    <h2>Selected work</h2>
+    <span><em>0{projects.length}</em> projects, 2025 to now</span>
+  </header>
+  <ol>
+    {#each projects as p, i}
+      <li class="reveal" use:reveal style="--i:{i}">
+        <em class="n" aria-hidden="true">0{i + 1}</em>
+        <div class="t">
+          <h3>{p.title}</h3>
+          <span class="arrow" aria-hidden="true">→</span>
+        </div>
+        <div class="d">
+          <p>{p.what}</p>
+          <span class="meta">{p.tags.join(' · ')}<span class="year">{p.year}</span></span>
+        </div>
+      </li>
+    {/each}
+  </ol>
+</section>
+
+<style>
+  .work { background: #17251b; color: #eef3ee; padding: clamp(4rem, 10vw, 9rem) var(--t-gutter); }
+  .head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; font-size: 0.875rem; color: #9fb3a3; margin-bottom: clamp(2rem, 6vw, 5rem); }
+  h2 { font-size: inherit; font-weight: 400; }
+  .head em { color: var(--t-accent); font-size: 1.1em; }
+  ol { list-style: none; padding: 0; display: grid; gap: clamp(2.5rem, 6vw, 5rem); }
+  li { position: relative; display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.5rem 3rem; align-items: end; padding-left: clamp(2rem, 5vw, 5rem); }
+  .n {
+    position: absolute; left: 0; top: -0.35em; z-index: 0;
+    font-size: clamp(4rem, 10vw, 9rem); line-height: 1; color: transparent;
+    -webkit-text-stroke: 1px rgb(255 255 255 / 0.22);
+    transition: color 0.6s ease;
+  }
+  li:hover .n { color: rgb(255 255 255 / 0.06); }
+  .t { position: relative; display: flex; align-items: baseline; gap: 1rem; }
+  h3 { font-size: clamp(2.25rem, 5.5vw, 5rem); font-weight: 400; letter-spacing: -0.025em; line-height: 0.95; transition: color 0.4s ease; }
+  li:hover h3 { color: #f6d9a3; }
+  .arrow { font-size: clamp(1.5rem, 3vw, 2.5rem); color: var(--t-accent); opacity: 0; transform: translateX(-10px); transition: opacity 0.4s ease, transform 0.5s var(--t-ease); }
+  li:hover .arrow { opacity: 1; transform: none; }
+  .d { display: grid; gap: 0.75rem; }
+  p { max-width: 38ch; color: #c9d5cb; }
+  .meta { font-size: 0.875rem; color: #9fb3a3; }
+  .year { margin-left: 1rem; color: #eef3ee; }
+  @media (max-width: 800px) {
+    li { grid-template-columns: 1fr; gap: 1rem; padding-left: 0; padding-top: 1.5rem; }
+    .n { top: -0.5rem; font-size: 3.5rem; }
+    .arrow { display: none; }
+  }
+</style>

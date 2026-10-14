@@ -1,0 +1,21 @@
+# Sina
+
+> Software engineer in Dhaka, Bangladesh, building calm, well-made products. Backends in Go with PostgreSQL, interfaces in Svelte and SvelteKit. Open to work.
+
+Site: https://ebnsina.dev
+Email: ebnsina.dev@gmail.com
+GitHub: https://github.com/ebnsina
+
+## Selected work
+
+- Alchemist: VOD transcoder. Upload once, get adaptive streams out. Go, FFmpeg, PostgreSQL.
+- Fajr LMS: learning platform for schools and madrasahs in South Asia and the Gulf. Go, SvelteKit.
+- Tavora: website, dashboard and till for restaurants in Bangladesh. Go, SvelteKit.
+- Safar: buses, trains and flights across Bangladesh from one search. SvelteKit, Drizzle.
+- Sina UI: small copy-in Svelte component library. Svelte, TypeScript.
+
+## How I work
+
+- Simple under load: the shortest solution that works, measured before it grows.
+- API first: the interface is the product, errors are structured and stable.
+- Halal software: no dark patterns, no hidden fees, nothing that works against the person using it.
