@@ -6,12 +6,15 @@
     motion(root, (reduce) => {
       gsap.set('.pre', { visibility: 'visible' });
       if (reduce) return;
-      // Words ink in as you scroll through the statement
+      // Lines rise out of their masks as you scroll through the statement
       SplitText.create('.big', {
-        type: 'words',
+        type: 'lines',
+        mask: 'lines',
+        linesClass: 'ln',
+        aria: 'none',
         autoSplit: true,
         onSplit: (self) =>
-          gsap.from(self.words, { opacity: 0.12, stagger: 0.05, ease: 'none', scrollTrigger: { trigger: '.big', start: 'top 80%', end: 'bottom 55%', scrub: true } })
+          gsap.from(self.lines, { yPercent: 100, stagger: 0.15, ease: 'none', scrollTrigger: { trigger: '.big', start: 'top 85%', end: 'bottom 60%', scrub: true } })
       });
     })
   );

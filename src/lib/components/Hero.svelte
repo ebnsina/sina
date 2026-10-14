@@ -26,9 +26,9 @@
         type: 'lines,words',
         mask: 'lines',
         linesClass: 'ln',
+        aria: 'none',
         autoSplit: true,
         onSplit: (self) => {
-          gsap.set('h1', { visibility: 'visible' });
           return gsap.from(self.words, { yPercent: 110, duration: d(1.2), stagger: 0.04, ease: 'power4.out', delay: 0.2 });
         }
       });
@@ -50,7 +50,7 @@
     <span class="fade">Bangladesh · {time}</span>
   </header>
 
-  <h1 class="pre">Software engineer<br />building <em>calm,</em><br />well-made products.</h1>
+  <h1>Software engineer<br />building <em>calm,</em><br />well-made products.</h1>
 
   <footer class="foot">
     <p class="fade">

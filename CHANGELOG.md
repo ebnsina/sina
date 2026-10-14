@@ -8,3 +8,4 @@
 - Removed the principles block.
 - Footer ridges rise on scroll; dusk palette warmed; bold logo; Bangladesh in place of Dhaka; WhatsApp link; hash-free in-page scroll; descender-safe text masks.
 - Deploy: static build to GitHub Pages via Actions, served at ebnsina.github.io/sina until a custom domain is added.
+- Performance: self-hosted, subsetted fonts with preload; CSS inlined at build; grain filter removed; headline paints before JS. Accessibility: main landmark, SplitText without aria-label, mask-based about reveal.

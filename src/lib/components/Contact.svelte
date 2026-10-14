@@ -24,6 +24,7 @@
         type: 'chars',
         mask: 'chars',
         charsClass: 'ch',
+        aria: 'none',
         onSplit: (self) => gsap.from(self.chars, { yPercent: 110, duration: 1, stagger: 0.03, ease: 'power4.out', scrollTrigger: { trigger: '.hello', start: 'top 85%' } })
       });
       gsap.from('.label, footer', { autoAlpha: 0, y: 16, duration: 0.9, stagger: 0.2, scrollTrigger: { trigger: root, start: 'top 75%' } });

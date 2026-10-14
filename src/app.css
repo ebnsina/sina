@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Trench Slab';
+  src: url('/fonts/trench-slab.woff2') format('woff2');
+  font-weight: 300 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fraunces';
+  src: url('/fonts/fraunces-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 
 :root {
   --t-bg: #f4f1ea;

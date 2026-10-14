@@ -10,7 +10,6 @@
     <linearGradient id="r2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6d7f5e" /><stop offset="0.5" stop-color="#43583f" /></linearGradient>
     <linearGradient id="r3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b3d2e" /><stop offset="0.6" stop-color="#17251b" /></linearGradient>
     <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4e6d6" stop-opacity="0" /><stop offset="0.55" stop-color="#f4e6d6" stop-opacity="0.7" /><stop offset="1" stop-color="#f4e6d6" stop-opacity="0" /></linearGradient>
-    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" /><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0" /></filter>
   </defs>
 
   <rect width="1440" height="900" fill="url(#sky)" />
@@ -37,7 +36,6 @@
     <path class="ridge" style="--d:3" fill="url(#r3)" d="M0 850 70 836 140 846 220 826 300 842 380 822 460 838 540 820 620 840 700 826 780 846 860 830 940 848 1020 832 1100 850 1180 834 1260 852 1340 838 1440 850V1000H0Z" />
   </g>
 
-  <rect width="1440" height="900" filter="url(#grain)" />
 </svg>
 
 <style>

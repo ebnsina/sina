@@ -11,6 +11,8 @@ export default defineConfig({
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
 			adapter: adapter(),
+			// Inline the small stylesheets so first paint needs no extra request
+			inlineStyleThreshold: 32768,
 			// GitHub Pages serves from /sina until a custom domain is added
 			paths: { base: process.argv.includes('dev') ? '' : (process.env.BASE_PATH as `/` | undefined) }
 		})

@@ -45,7 +45,9 @@
   {@html `<script type="application/ld+json">${jsonld}</script>`}
 </svelte:head>
 
-<Hero />
-<Work />
-<About />
-<Contact />
+<main>
+  <Hero />
+  <Work />
+  <About />
+  <Contact />
+</main>
