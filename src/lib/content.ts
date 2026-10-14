@@ -1,4 +1,4 @@
-export const site = 'https://ebnsina.dev';
+export const site = 'https://sina.bd';
 export const name = 'Sina';
 export const email = 'ebnsina.dev@gmail.com';
 export const title = 'Sina — Software engineer';
