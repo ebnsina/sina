@@ -1,56 +1,32 @@
-# sv
+# Sina
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+One-page portfolio. Live at <https://ebnsina.github.io/sina/>.
 
-## Creating a project
+Software engineer in Bangladesh building calm, well-made products. Backends in Go with PostgreSQL, interfaces in Svelte.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Stack
 
-```sh
-# create a new project
-npx sv create my-app
-```
+- SvelteKit 2, Svelte 5, TypeScript. Prerendered to static HTML.
+- GSAP with ScrollTrigger, SplitText and ScrambleText for motion.
+- Trench Slab (Fontshare) for text, Fraunces italic (Google Fonts) for accents.
+- No UI kit, no images. The dawn and night scenes are inline SVG.
 
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-pnpm dlx sv@1.1.1 create --template minimal --types ts --install pnpm .
-```
-
-## Adding features
-
-Add features to your project with `sv add`:
+## Run
 
 ```sh
-npx sv add
+pnpm install
+pnpm dev
 ```
 
-For example, to add Tailwind CSS:
+`pnpm build` writes a static site to `build/`. Set `BASE_PATH=/sina` to build for the GitHub Pages subpath.
 
-```sh
-npx sv add tailwindcss
-```
+## Edit
 
-## Developing
+- Copy, projects and links: `src/lib/content.ts`
+- Sections: `src/lib/components/{Hero,Work,About,Contact}.svelte`
+- Scenes: `src/lib/components/{Scene,Night}.svelte`
+- Design tokens: `src/app.css`
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Deploy
 
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Pushing to `main` runs `.github/workflows/pages.yml`, which builds and publishes to GitHub Pages.
