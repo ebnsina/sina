@@ -5,6 +5,8 @@
   const fmt = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Dhaka' });
   let time = $state(fmt.format(new Date()));
   let root: HTMLElement;
+  // Scroll without writing the hash into the URL
+  function go(e: MouseEvent) { e.preventDefault(); document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' }); }
 
   $effect(() => {
     const id = setInterval(() => (time = fmt.format(new Date())), 10_000);
@@ -23,6 +25,7 @@
       SplitText.create('h1', {
         type: 'lines,words',
         mask: 'lines',
+        linesClass: 'ln',
         autoSplit: true,
         onSplit: (self) => {
           gsap.set('h1', { visibility: 'visible' });
@@ -43,9 +46,8 @@
 <section class="hero" bind:this={root}>
   <Scene />
   <header class="bar">
-    <span class="fade">Sina</span>
-    <a class="fade status" href="#contact"><i></i>Open to work</a>
-    <span class="fade">Dhaka · {time}</span>
+    <span class="fade logo">Sina</span>
+    <span class="fade">Bangladesh · {time}</span>
   </header>
 
   <h1 class="pre">Software engineer<br />building <em>calm,</em><br />well-made products.</h1>
@@ -55,7 +57,7 @@
       I design and ship backends and interfaces that stay simple under load.
       Currently working on video infrastructure.
     </p>
-    <a class="fade cta" href="#work">Selected work <span aria-hidden="true">↓</span></a>
+    <a class="fade cta" href="#work" onclick={go}>Selected work <span aria-hidden="true">↓</span></a>
   </footer>
 </section>
 
@@ -68,9 +70,8 @@
     padding: var(--t-gutter);
     gap: 2rem;
   }
+  .logo { font-weight: 700; font-size: 1.25rem; color: var(--t-ink); letter-spacing: -0.02em; }
   .bar, .foot { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; font-size: 0.875rem; color: var(--t-mute); }
-  .status { display: inline-flex; align-items: center; gap: 0.5rem; }
-  .status i { width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--t-accent); animation: pulse 2s ease-in-out infinite; }
   h1 {
     align-self: center;
     font-weight: 400;
@@ -85,10 +86,8 @@
   .cta:hover { color: #f6d98a; border-color: #f6d98a; }
   .cta span { transition: transform 0.4s var(--t-ease); }
   .cta:hover span { transform: translateY(3px); }
-  @keyframes pulse { 50% { opacity: 0.35; } }
   @media (max-width: 640px) {
     .foot { flex-direction: column; align-items: flex-start; }
     .bar span:last-child { display: none; }
   }
-  @media (prefers-reduced-motion: reduce) { .status i { animation: none; } }
 </style>

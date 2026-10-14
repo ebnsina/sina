@@ -26,3 +26,6 @@ em { font-family: var(--t-serif); font-style: italic; font-weight: 400; }
 
 /* Elements gsap reveals start hidden to avoid a flash before the first frame */
 .pre { visibility: hidden; }
+/* SplitText mask wrappers: leave room for descenders */
+.ln-mask, .ch-mask { padding-bottom: 0.15em; margin-bottom: -0.15em; }
+.ch-mask { padding-inline: 0.02em; margin-inline: -0.02em; }

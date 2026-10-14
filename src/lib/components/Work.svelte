@@ -19,7 +19,6 @@
 <section id="work" class="work" bind:this={root}>
   <header class="head pre">
     <h2>Selected work</h2>
-    <span><em>0{projects.length}</em> projects, 2025 to now</span>
   </header>
   <ol>
     {#each projects as p, i}
@@ -42,7 +41,6 @@
   .work { background: #17251b; color: #eef3ee; padding: clamp(4rem, 10vw, 9rem) var(--t-gutter); overflow: hidden; }
   .head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; font-size: 0.875rem; color: #9fb3a3; margin-bottom: clamp(2rem, 6vw, 5rem); }
   h2 { font-size: inherit; font-weight: 400; }
-  .head em { color: var(--t-accent); font-size: 1.1em; }
   ol { list-style: none; padding: 0; display: grid; gap: clamp(2.5rem, 6vw, 5rem); }
   li { position: relative; display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.5rem 3rem; align-items: end; padding-left: clamp(2rem, 5vw, 5rem); }
   .n {

@@ -12,17 +12,18 @@
       if (reduce) return;
       // Dusk to night: sky stops darken, stars and moon appear, layers parallax at different depths
       gsap.timeline({ scrollTrigger: { trigger: root, start: 'top bottom', end: 'bottom bottom', scrub: 0.6 } })
-        .to('.s1', { attr: { 'stop-color': '#3b3048' }, ease: 'none' }, 0)
+        .to('.s1', { attr: { 'stop-color': '#2f3f33' }, ease: 'none' }, 0)
         .to('.s2', { attr: { 'stop-color': '#17251b' }, ease: 'none' }, 0)
         .to('.s3', { attr: { 'stop-color': '#2a3f30' }, ease: 'none' }, 0)
         .to('.stars', { opacity: 1, y: -60, ease: 'none' }, 0.2)
         .to('.moon', { opacity: 1, y: -90, ease: 'none' }, 0.1)
-        .fromTo('.r1', { y: 120 }, { y: 0, ease: 'none' }, 0)
-        .fromTo('.r2', { y: 220 }, { y: 0, ease: 'none' }, 0);
+        .fromTo('.r1', { y: 420 }, { y: 0, ease: 'power1.out', duration: 0.8 }, 0.25)
+        .fromTo('.r2', { y: 640 }, { y: 0, ease: 'power1.out', duration: 0.75 }, 0.35);
       gsap.to('.star', { opacity: 0.15, duration: () => 1 + Math.random() * 2, repeat: -1, yoyo: true, ease: 'sine.inOut', stagger: { each: 0.05, from: 'random' } });
       SplitText.create('.hello', {
         type: 'chars',
         mask: 'chars',
+        charsClass: 'ch',
         onSplit: (self) => gsap.from(self.chars, { yPercent: 110, duration: 1, stagger: 0.03, ease: 'power4.out', scrollTrigger: { trigger: '.hello', start: 'top 85%' } })
       });
       gsap.from('.label, footer', { autoAlpha: 0, y: 16, duration: 0.9, stagger: 0.2, scrollTrigger: { trigger: root, start: 'top 75%' } });

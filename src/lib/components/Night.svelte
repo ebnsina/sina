@@ -7,7 +7,7 @@
 
 <svg class="night" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
   <defs>
-    <linearGradient id="nsky" x1="0" y1="0" x2="0" y2="1"><stop class="s0" offset="0" stop-color="#f4f1ea" /><stop class="s1" offset="0.3" stop-color="#f1d4b8" /><stop class="s2" offset="0.6" stop-color="#d7a894" /><stop class="s3" offset="1" stop-color="#7b6f82" /></linearGradient>
+    <linearGradient id="nsky" x1="0" y1="0" x2="0" y2="1"><stop class="s0" offset="0" stop-color="#f4f1ea" /><stop class="s1" offset="0.3" stop-color="#efd2b4" /><stop class="s2" offset="0.6" stop-color="#c9b08f" /><stop class="s3" offset="1" stop-color="#5e6a56" /></linearGradient>
     <radialGradient id="mglow"><stop offset="0" stop-color="#f6d98a" stop-opacity="0.35" /><stop offset="1" stop-color="#f6d98a" stop-opacity="0" /></radialGradient>
     <linearGradient id="n1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22362a" /><stop offset="1" stop-color="#14231a" /></linearGradient>
     <linearGradient id="n2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#132019" /><stop offset="1" stop-color="#0b140f" /></linearGradient>

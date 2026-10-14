@@ -3,7 +3,7 @@
   import Work from '#lib/components/Work.svelte';
   import About from '#lib/components/About.svelte';
   import Contact from '#lib/components/Contact.svelte';
-  import { site, name, email, title, description, projects } from '#lib/content.ts';
+  import { site, name, email, whatsapp, title, description, projects } from '#lib/content.ts';
 
   const jsonld = JSON.stringify({
     '@context': 'https://schema.org',
@@ -11,8 +11,9 @@
     name,
     url: site,
     email,
+    telephone: whatsapp,
     jobTitle: 'Software engineer',
-    address: { '@type': 'PostalAddress', addressLocality: 'Dhaka', addressCountry: 'BD' },
+    address: { '@type': 'PostalAddress', addressCountry: 'BD' },
     sameAs: ['https://github.com/ebnsina'],
     knowsAbout: ['Go', 'PostgreSQL', 'Svelte', 'SvelteKit', 'Video infrastructure'],
     hasOccupation: { '@type': 'Occupation', name: 'Software engineer' },

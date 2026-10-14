@@ -1,8 +1,9 @@
 export const site = 'https://sina.bd';
 export const name = 'Sina';
 export const email = 'ebnsina.dev@gmail.com';
+export const whatsapp = '+8801841252123';
 export const title = 'Sina — Software engineer';
-export const description = 'Software engineer in Dhaka building calm, well-made products. Go, PostgreSQL, Svelte. Open to work.';
+export const description = 'Software engineer in Bangladesh building calm, well-made products. Go, PostgreSQL, Svelte.';
 
 export const projects = [
   { title: 'Alchemist', what: 'VOD transcoder. Upload once, get adaptive streams out, built to stay boring under load.', tags: ['Go', 'FFmpeg', 'PostgreSQL'], year: '2026' },
@@ -14,5 +15,6 @@ export const projects = [
 
 export const links = [
   ['GitHub', 'https://github.com/ebnsina'],
+  ['WhatsApp', `https://wa.me/${whatsapp.replace('+', '')}`],
   ['Email', `mailto:${email}`]
 ];
