@@ -2,7 +2,7 @@
 
 > Software engineer in Bangladesh building calm, well-made products. Backends in Rust and Go on PostgreSQL and ClickHouse, interfaces in TypeScript with Svelte and SvelteKit.
 
-Site: https://ebnsina.pages.dev
+Site: https://sina.ebnsina.workers.dev
 Email: ebnsina.dev@gmail.com
 WhatsApp: +8801841252123
 GitHub: https://github.com/ebnsina

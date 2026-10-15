@@ -1,6 +1,6 @@
 # Sina
 
-One-page portfolio. Live at <https://ebnsina.pages.dev/>.
+One-page portfolio. Live at <https://sina.ebnsina.workers.dev/>.
 
 Software engineer in Bangladesh building calm, well-made products. Backends in Rust and Go on PostgreSQL and ClickHouse, interfaces in TypeScript with Svelte and SvelteKit.
 
@@ -29,4 +29,4 @@ pnpm dev
 
 ## Deploy
 
-Cloudflare Pages is connected to this repo. Every push to `main` builds with `pnpm build` and publishes `build/` to ebnsina.pages.dev.
+Cloudflare Workers Builds is connected to this repo. Every push to `main` runs `pnpm build` and `npx wrangler deploy`, which serves `build/` as static assets per `wrangler.jsonc` at sina.ebnsina.workers.dev.

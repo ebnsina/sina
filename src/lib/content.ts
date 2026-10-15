@@ -1,4 +1,4 @@
-export const site = 'https://ebnsina.pages.dev';
+export const site = 'https://sina.ebnsina.workers.dev';
 export const name = 'Sina';
 export const email = 'ebnsina.dev@gmail.com';
 export const whatsapp = '+8801841252123';

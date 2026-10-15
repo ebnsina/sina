@@ -7,5 +7,5 @@
 - Motion: GSAP ScrollTrigger and SplitText throughout; hero parallax, scroll-inked about statement, dusk-to-night footer with parallax layers and twinkling stars.
 - Removed the principles block.
 - Footer ridges rise on scroll; dusk palette warmed; bold logo; Bangladesh in place of Dhaka; WhatsApp link; hash-free in-page scroll; descender-safe text masks.
-- Deploy: Cloudflare Pages, connected to the GitHub repo; every push to main publishes to ebnsina.pages.dev. Moved off GitHub Pages because github.io was unreachable from local mobile carriers.
+- Deploy: Cloudflare Workers with static assets, built from the GitHub repo on every push to main, at sina.ebnsina.workers.dev. Moved off GitHub Pages because github.io was unreachable from local mobile carriers.
 - Performance: self-hosted, subsetted fonts with preload; CSS inlined at build; grain filter removed; headline paints before JS. Accessibility: main landmark, SplitText without aria-label, mask-based about reveal.
