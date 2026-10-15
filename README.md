@@ -1,6 +1,6 @@
 # Sina
 
-One-page portfolio. Live at <https://ebnsina.github.io/sina/>.
+One-page portfolio. Live at <https://ebnsina.pages.dev/>.
 
 Software engineer in Bangladesh building calm, well-made products. Backends in Rust and Go on PostgreSQL and ClickHouse, interfaces in TypeScript with Svelte and SvelteKit.
 
@@ -18,7 +18,7 @@ pnpm install
 pnpm dev
 ```
 
-`pnpm build` writes a static site to `build/`. Set `BASE_PATH=/sina` to build for the GitHub Pages subpath.
+`pnpm build` writes a static site to `build/`.
 
 ## Edit
 
@@ -29,4 +29,4 @@ pnpm dev
 
 ## Deploy
 
-Pushing to `main` runs `.github/workflows/pages.yml`, which builds and publishes to GitHub Pages.
+Cloudflare Pages is connected to this repo. Every push to `main` builds with `pnpm build` and publishes `build/` to ebnsina.pages.dev.
